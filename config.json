@@ -1,4 +1,12 @@
 {
   "prefixes": [">", "luna!"],
-  "development": true
+  "development": true,
+  "presence": {
+    "first": {
+      "name": "commands | >help | >say | >ping | >invite"
+    },
+    "second": {
+      "name": "MIAU on loop!"
+    }
+  }
 }

@@ -1,25 +1,26 @@
 import { CommandClient } from '../deps.ts';
+import config from '../config.json' assert { type: 'json' };
+
 export default function readyHandler(client: CommandClient) {
   client.on('ready', () => {
     console.log(`Ready! User: ${client.user?.tag}`);
-    console.log(`Avatar URL: ${client.user?.avatarURL('png')}`);\
+    console.log(`Avatar URL: ${client.user?.avatarURL('png')}`);
 
     let isTimerOver = true;
-    
+
     setInterval(() => {
       if (isTimerOver) {
         client.setPresence({
           activity: {
-            name: 'commands | !help | !ping | !invite',
+            name: config.presence.first.name,
             type: 'LISTENING',
           },
         });
       } else {
         client.setPresence({
           activity: {
-            name: 'MIAU on loop!',
+            name: config.presence.second.name,
             type: 'LISTENING',
-            url: 'https://twitch.tv/breadoonline',
           },
         });
       }
