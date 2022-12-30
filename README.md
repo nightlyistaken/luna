@@ -12,14 +12,16 @@ features. It is still in development and is not ready for production use.
 ## Running
 
 First you have to set up the environment variables. You can do this by running:
+
 ```sh
 deno task setup
 ```
+
 Then you can run the bot with:
+
 ```sh
 deno task run
 ```
-
 
 ## Contributing
 
