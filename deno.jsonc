@@ -1,0 +1,36 @@
+// Deno Configuration File (https://deno.land/manual/getting_started/configuration_file)
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "lint": {
+    "files": {
+      "include": ["."],
+      "exclude": ["www"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": ["."],
+      "exclude": ["www/"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "singleQuote": true,
+      "proseWrap": "preserve"
+    }
+  },
+  "tasks": {
+    "run": "deno run --allow-env --allow-read=. --allow-net main.ts",
+    "setup": "deno run --allow-env --allow-write setup.ts"
+  }
+}

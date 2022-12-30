@@ -1,0 +1,61 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+
+<html class="dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invite | Home</title>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="./icon.png" class="" />
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.14.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div class="p-3">
+      <Navbar />
+      <div class="hero">
+        <div class="text-center hero-content text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="text-5xl text-indigo-500 p-6 font-semibold">
+              Invite me!
+            </h1>
+            <input
+              class="input"
+              type="text"
+              value="https://discord.com/oauth2/authorize?client_id=891643593075335198&permissions=536870911991&scope=bot%20applications.commands"
+            />
+            <a
+              class="btn btn-dark"
+              href="https://discord.com/oauth2/authorize?client_id=891643593075335198&permissions=536870911991&scope=bot%20applications.commands"
+            >
+              Invite
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+        body {
+          font-family: "Montserrat", sans-serif;
+        }
+        .dark {
+          background-color: HSL(237, 34%, 13%);
+        }
+      </style>
+    </div>
+  </body>
+</html>

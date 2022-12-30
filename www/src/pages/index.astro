@@ -1,0 +1,61 @@
+---
+import Navbar from "../components/Navbar.astro";
+---
+
+<html class="dark">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | Home</title>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    ></script>
+    <link rel="icon" type="image/x-icon" href="./icon.png" class="" />
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.14.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div class="p-3">
+      <Navbar />
+      <div class="hero">
+        <div class="text-center hero-content text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="text-5xl text-indigo-500 p-6 font-semibold">Luna</h1>
+            <h1 class="text-2xl p-1">
+              Really *cute* cat-themed bot that is now for discord heh~~~
+            </h1>
+            <h1 class="text-xl p-5">
+              Enter your discord ID<span class="text-red-300 font-thin">*</span>
+            </h1>
+            <input class="input" placeholder="eg. Nightly#3478" />
+            <button
+              class="btn btn-neutral"
+              onclick="document.location ='bot-link.html'"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .dark {
+        background-color: HSL(237, 34%, 13%);
+      }
+    </style>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
